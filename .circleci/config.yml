@@ -27,9 +27,6 @@ workflows:
       - test:
           requires:
             - build
-          filters:
-            branches:
-              only: master
 
 # must be named circle.yml and must be at the root of project
 # version 1
