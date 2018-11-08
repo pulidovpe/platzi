@@ -2,6 +2,7 @@ version: 2
 jobs:
   build:
     machine: true
+    docker_layer_caching: true
     steps:
       - checkout
       - run: |
@@ -14,9 +15,6 @@ workflows:
   build_and_test:
     jobs:
       - build
-          filters
-            branches:
-              only: master
 
 
 # must be named circle.yml and must be at the root of project
