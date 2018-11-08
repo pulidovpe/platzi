@@ -1,17 +1,17 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: node:8.11.4
+    machine: true
     steps:
       - checkout
-      - run: docker build -t platzi
+      - run: |
+          docker build -t platzi
   test:
-      docker:
-        - image: node:8.11.4
-      steps:
-        - checkout
-        - run: docker run platzi npm test
+    machine: true
+    steps:
+      - checkout
+      - run: |
+          docker run platzi npm test
 
 workflows:
   version: 2
