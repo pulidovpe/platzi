@@ -1,0 +1,46 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: node:8.11.4
+    branches:
+      only:
+        - master
+    steps:
+      - checkout
+      - run: docker build -t platzi
+  test:
+      docker:
+        - image: node:8.11.4
+      branches:
+        only:
+          - master
+      steps:
+        - checkout
+        - run: docker run platzi npm test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+
+# must be named circle.yml and must be at the root of project
+# version 1
+# machine:
+#   services:
+#     - docker
+
+# dependencies:
+#   override:
+#     - docker build -t platzi
+
+# test:
+#   override:
+#     - docker run platzi npm test
