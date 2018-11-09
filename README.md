@@ -47,7 +47,7 @@ npm install
 
 node server.js
 ```
-Para ver la app en ejecución, luego de ejecutar los comandos anteriores, abrir el navegador en [localhost:3000] (http://localhost:3000/)
+Para ver la app en ejecución, luego de ejecutar los comandos anteriores, abrir el navegador en [localhost:3000](http://localhost:3000/)
 
 Para ejecutar los test:
 ```Shell
