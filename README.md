@@ -39,7 +39,7 @@ Cita tomada de [Wikipedia](https://es.wikipedia.org/wiki/Docker_(software))
 #### OS X, Linux y Windows
 *Abra un terminal y ejecute:*
 ```Shell
-git clone http://github.com/pulidovpe/platzi.git
+git clone http://github.com/pulidovpe/platzi-demo.git
 
 cd platzi
 
