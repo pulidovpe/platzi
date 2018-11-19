@@ -34,6 +34,7 @@ Cita tomada de [Wikipedia](https://es.wikipedia.org/wiki/Docker_(software))
 	- express: ^4.16.4
 	- mocha: ^5.2.0
 	- supertest: ^3.3.0
+	- now: 12.0.1
 
 ## Install / Instalación
 #### OS X, Linux y Windows
@@ -80,10 +81,11 @@ Para correr las pruebas de integración, debe tener una cuenta en CircleCi y aso
 - [x] Pruebas en local
 - [x] Conexion con CircleCi
 - [x] Pruebas de Integracion Continua
+- [ ] Pruebas de despliegue usando Now.sh
 - [ ] ...
 
 ## Contribute / Para contribuir
-1. Has un [Fork](https://github.com/pulidovpe/docker-php-mysql/fork)
+1. Has un [Fork](https://github.com/pulidovpe/platzi-demo/fork)
 2. Crea tu propia rama (git checkout -b feature/fooBar)
 3. Sube tus cambios (git commit -am 'Add some fooBar')
 4. Actualiza tu rama (git push origin feature/fooBar)
