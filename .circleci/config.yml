@@ -2,21 +2,24 @@ version: 2
 jobs:
   build:
     machine: true
-    docker_layer_caching: true
+    - setup_remote_docker:
+      docker_layer_caching: true
     steps:
       - checkout
       - run: |
           docker build -t platzi .
   test:
     machine: true
-    docker_layer_caching: true
+    - setup_remote_docker:
+      docker_layer_caching: true
     steps:
       - checkout
       - run: |
           docker run platzi npm test
   deploy:
       machine: true
-      docker_layer_caching: true
+      - setup_remote_docker:
+        docker_layer_caching: true
       steps:
         - run:
             name: Deploy with Now
